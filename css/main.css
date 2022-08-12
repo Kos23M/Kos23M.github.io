@@ -1,0 +1,645 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  box-sizing: border-box;
+  font: normal normal 400 14px/20px Roboto;
+}
+
+a {
+  text-decoration: none;
+}
+
+div, main {
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colors: */
+  ---fa7d19-ci-orange: #FA7D19;
+  ---f20030-error: #F20030;
+  ---049091-gutschrift: #049091;
+  ---63c2cd-marker: #63C2CD;
+  ---ed751b-keycolor: #ED751B;
+  --unnamed-color-fff7ee: #FFF7EE;
+  ---bbc7d6-border: #BBC7D6;
+  ---bbc7d6-50-divider: #BBC7D680;
+  ---023e84-primary: #023E84;
+  ---03326b-60-secondary: #03326BB3;
+  ---03326b-38-disabled-placeholder: #03326B61;
+  ---f5f7fa-bg-2: #F5F7FA;
+  ---ffffff-bg-1: #FFFFFF;
+}
+
+header {
+  background-image: linear-gradient(to right, #FFDE12, #FFDE12), linear-gradient(to right, #CCEAF1, #CCEAF1), linear-gradient(to right, #63C2CD, #63C2CD), linear-gradient(to right, #CCEAF1, #CCEAF1), linear-gradient(to right, #023E84, #023E84), linear-gradient(to right, #63C2CD, #63C2CD), linear-gradient(to right, #E9435C, #E9435C), linear-gradient(to right, #A2C62E, #A2C62E), linear-gradient(to right, #FFDE12, #FFDE12), linear-gradient(to right, #95D2DD, #95D2DD), linear-gradient(to right, #F29213, #F29213);
+  background-position: 0% bottom, 0% bottom, 0% bottom, 0% bottom, 0% bottom, 0% bottom, 0% bottom, 0% bottom, 0% bottom, 0% bottom, 0% bottom;
+  background-size: 13.2% 3px, 22.8% 3px, 29.6% 3px, 37.4% 3px, 52.3% 3px, 58.3% 3px, 69.8% 3px, 81.3% 3px, 85.4% 3px, 89.5% 3px, 100% 3px;
+  background-repeat: no-repeat;
+  display: inline-flex;
+  min-width: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1200px;
+  height: 80px;
+  margin: 0 auto;
+}
+.header-left {
+  display: inline-flex;
+  align-items: center;
+}
+.header-left.mobile-menu nav.desktop-menu {
+  display: flex;
+  position: absolute;
+  background: #fff;
+  height: 100%;
+  top: 80px;
+  left: 0;
+  flex-direction: column;
+}
+.header-left.mobile-menu nav.desktop-menu a {
+  margin: 0;
+  padding: 20px 24px;
+  border-bottom: 3px solid #eeeeee;
+}
+.header-left .mobile-menu-button {
+  font: normal normal 400 10px/16px Roboto;
+  letter-spacing: 0.16px;
+  color: var(---023e84-primary);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 0 24px;
+}
+.header-left .mobile-menu-button:before {
+  content: url(../src/menu-24px.svg);
+  width: 24px;
+  height: 24px;
+}
+.header-left a.logo {
+  content: url(../src/buhl-logo.svg);
+  display: inline-flex;
+  margin: 0 40px;
+  height: 26px;
+}
+.header-left a.logo:hover {
+  content: url(../src/buhl-logo-hover.svg);
+}
+.header-left nav.desktop-menu {
+  display: inline-flex;
+}
+.header-left nav.desktop-menu a {
+  font: normal normal 500 14px/20px Roboto;
+  letter-spacing: 0.35px;
+  color: var(---023e84-primary);
+  display: inline-flex;
+  margin: 0 20px 0 0;
+}
+.header-left nav.desktop-menu a:after {
+  content: url(../src/ic-pfeil-dd-24.svg);
+  width: 20px;
+  height: 20px;
+  transition: 100ms;
+}
+.header-left nav.desktop-menu a:hover:after {
+  transform: matrix(0, 1, -1, 0, 0, 0);
+}
+.header-right {
+  display: inline-flex;
+  align-items: center;
+}
+.header-right nav {
+  display: inline-flex;
+}
+.header-right nav a {
+  font: normal normal 400 10px/16px Roboto;
+  letter-spacing: 0.16px;
+  color: var(---023e84-primary);
+  margin: 0 20px 0 0;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header-right nav a:before {
+  display: flex;
+  height: 24px;
+}
+.header-right nav a.h-r-suchen:before {
+  content: url(../src/ic-suche-24.svg);
+}
+.header-right nav a.h-r-apps:before {
+  content: url(../src/ic-apps-24.svg);
+}
+.header-right nav a.h-r-kundencenter:before {
+  content: url(../src/ic-person-24.svg);
+}
+.header-right nav a.h-r-warenkorb:before {
+  content: url(../src/ic-warenkorb-24.svg);
+}
+.header-right a.h-r-anmelden-button {
+  font: normal normal 400 14px/20px Roboto;
+  letter-spacing: 0.7px;
+  color: var(---ffffff-bg-1);
+  background: var(---023e84-primary);
+  border-radius: 18px;
+  display: inline-flex;
+  align-items: center;
+  margin: 0 40px 0 0;
+  text-transform: uppercase;
+  padding: 6px 16px 6px 0;
+}
+.header-right a.h-r-anmelden-button:before {
+  content: url(../src/account_circle-24px.svg);
+  width: 24px;
+  height: 24px;
+  margin: 0 8px 0 12px;
+}
+
+.offer {
+  display: inline-flex;
+  background: var(---f5f7fa-bg-2);
+  min-width: 100%;
+}
+.offer-main {
+  display: flex;
+  align-items: center;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.offer-content {
+  display: inline-flex;
+  flex-direction: column;
+  width: 606px;
+  margin: 93px 0;
+}
+.offer-content img {
+  width: 163px;
+  height: 28px;
+}
+.offer-content h1 {
+  font: normal normal 900 46px/60px Roboto;
+  letter-spacing: 1px;
+  color: var(---023e84-primary);
+  margin: 36px 0 56px 0;
+}
+.offer-content button {
+  font: normal normal 700 16px/19px Roboto;
+  letter-spacing: 1.44px;
+  color: var(---ffffff-bg-1);
+  background: var(---ed751b-keycolor);
+  width: 280px;
+  height: 48px;
+  border-radius: 24px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.offer-image {
+  display: inline-flex;
+  background: url(../src/Gruppe_22024-2x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 514px;
+  height: 474px;
+}
+
+main {
+  margin: 0 auto;
+  width: 1200px;
+  min-height: 100%;
+  padding: 0 40px;
+}
+
+.cards {
+  margin: 40px 0 100px 0;
+}
+.cards h2 {
+  font: normal normal 700 24px/32px Roboto;
+  letter-spacing: 0.31px;
+  color: var(---023e84-primary);
+  margin: 0 0 26px 0;
+}
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+}
+.cards-container div {
+  box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.1215686275);
+  border-radius: 13px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 52px 40px 40px 40px;
+}
+.cards-container div:nth-child(2) {
+  margin: 0 20px;
+}
+.cards-container div section {
+  display: flex;
+  flex-direction: column;
+}
+.cards-container div span {
+  font: normal normal 700 20px/26px Roboto;
+  letter-spacing: 0.32px;
+  color: var(---023e84-primary);
+  margin: 26px 0 16px 0;
+}
+.cards-container div p {
+  font: normal normal 400 16px/21px Roboto;
+  letter-spacing: 0.26px;
+  color: var(---023e84-primary);
+}
+
+.offers-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 140px 0;
+}
+.offers-container img {
+  width: 496px;
+}
+.offers-container div {
+  padding: 0 0 0 40px;
+}
+.offers-container div span {
+  font: normal normal 700 14px/20px Roboto;
+  letter-spacing: 0.84px;
+  color: var(---ed751b-keycolor);
+  text-transform: uppercase;
+}
+.offers-container div h2 {
+  font: normal normal 700 32px/43px Roboto;
+  letter-spacing: 1px;
+  color: var(---023e84-primary);
+  margin: 20px 0;
+}
+.offers-container div p {
+  font: normal normal 400 16px/25px Roboto;
+  letter-spacing: 0.26px;
+  color: var(---023e84-primary);
+  margin: 0 0 40px 0;
+}
+.offers-container div button {
+  font: normal normal 700 16px/19px Roboto;
+  letter-spacing: 1.44px;
+  color: var(---ffffff-bg-1);
+  background: var(---ed751b-keycolor);
+  width: 280px;
+  height: 48px;
+  border-radius: 24px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.offers-container:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+.offers-container:nth-child(odd) div {
+  padding: 0 40px 0 0;
+}
+
+footer {
+  background-image: linear-gradient(to right, #FFDE12, #FFDE12), linear-gradient(to right, #CCEAF1, #CCEAF1), linear-gradient(to right, #63C2CD, #63C2CD), linear-gradient(to right, #CCEAF1, #CCEAF1), linear-gradient(to right, #023E84, #023E84), linear-gradient(to right, #63C2CD, #63C2CD), linear-gradient(to right, #E9435C, #E9435C), linear-gradient(to right, #A2C62E, #A2C62E), linear-gradient(to right, #FFDE12, #FFDE12), linear-gradient(to right, #95D2DD, #95D2DD), linear-gradient(to right, #F29213, #F29213);
+  background-position: 0% top, 0% top, 0% top, 0% top, 0% top, 0% top, 0% top, 0% top, 0% top, 0% top, 0% top;
+  background-size: 13.2% 3px, 22.8% 3px, 29.6% 3px, 37.4% 3px, 52.3% 3px, 58.3% 3px, 69.8% 3px, 81.3% 3px, 85.4% 3px, 89.5% 3px, 100% 3px;
+  background-repeat: no-repeat;
+  display: inline-flex;
+  min-width: 100%;
+  height: 147px;
+  margin: 40px 0 0 0;
+  background-color: var(---023e84-primary);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  min-height: 100%;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  justify-content: space-between;
+}
+.footer a.logo {
+  content: url(../src/buhl-logo-footer.svg);
+  display: inline-flex;
+  height: 26px;
+}
+.footer div {
+  display: inline-flex;
+}
+.footer div a {
+  font: normal normal 400 14px/20px Roboto;
+  letter-spacing: 0.35px;
+  color: var(---ffffff-bg-1);
+  margin: 0 0 0 40px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .header {
+    width: 100%;
+  }
+  .header-left.mobile-menu nav.desktop-menu {
+    width: 50%;
+  }
+  .header-left .mobile-menu-button {
+    display: inline-flex;
+  }
+  .header-left a.logo {
+    margin: 0 28px;
+  }
+  .header-left a.logo:hover {
+    content: url(../src/buhl-logo-hover.svg);
+  }
+  .header-left nav.desktop-menu {
+    display: none;
+  }
+  .header-right a.h-r-anmelden-button {
+    margin: 0 24px 0 0;
+  }
+  .offer-main {
+    width: 100%;
+    padding: 0 0 0 24px;
+    justify-content: center;
+  }
+  .offer-content {
+    width: 360px;
+  }
+  .offer-content h1 {
+    font: normal normal 900 32px/38px Roboto;
+    letter-spacing: 1px;
+    color: var(---023e84-primary);
+    margin: 36px 0 39px 0;
+  }
+  .offer-content button {
+    font: normal normal 700 16px/19px Roboto;
+    letter-spacing: 1.44px;
+    color: var(---ffffff-bg-1);
+    background: var(---ed751b-keycolor);
+    width: 240px;
+    height: 48px;
+    border-radius: 24px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  .offer-image {
+    background: url(../src/Gruppe-22147-2x.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 531px;
+    height: 425px;
+    margin: 0 0 0 -147px;
+  }
+  main {
+    width: 100%;
+    padding: 0 24px;
+  }
+  .cards {
+    margin: 24px 0 75px 0;
+  }
+  .cards-container div {
+    display: inline-flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .cards-container div span {
+    font: normal normal 700 20px/26px Roboto;
+    letter-spacing: 0.32px;
+    color: var(---023e84-primary);
+    margin: 26px 0 16px 0;
+  }
+  .offers-container {
+    margin: 0 0 120px 0;
+  }
+  .offers-container img {
+    width: 320px;
+    height: 100%;
+  }
+  .footer {
+    width: 100%;
+  }
+  .footer a.logo {
+    content: url(../src/buhl-logo-footer.svg);
+    display: inline-flex;
+    height: 26px;
+  }
+  .footer div {
+    display: inline-flex;
+  }
+  .footer div a {
+    font: normal normal 400 14px/20px Roboto;
+    letter-spacing: 0.35px;
+    color: var(---ffffff-bg-1);
+    margin: 0 0 0 40px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .header {
+    width: 100%;
+  }
+  .header-left.mobile-menu nav.desktop-menu {
+    width: 100%;
+  }
+  .header-left .mobile-menu-button {
+    display: inline-flex;
+  }
+  .header-left a.logo {
+    margin: 0 20px;
+  }
+  .header-left a.logo:hover {
+    content: url(../src/buhl-logo-hover.svg);
+  }
+  .header-left nav.desktop-menu {
+    display: none;
+  }
+  .header-right nav a.h-r-suchen {
+    display: none;
+  }
+  .header-right nav a.h-r-apps {
+    display: none;
+  }
+  .header-right nav a.h-r-kundencenter {
+    display: none;
+  }
+  .header-right a.h-r-anmelden-button {
+    font: normal normal 400 10px/16px Roboto;
+    letter-spacing: 0.16px;
+    color: var(---023e84-primary);
+    margin: 0 20px 0 0;
+    background: none;
+    border-radius: 0;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: none;
+    padding: 0;
+  }
+  .header-right a.h-r-anmelden-button:before {
+    display: flex;
+    content: url(../src/ic-buhl-anmelden-24.svg);
+    height: 24px;
+    margin: 0;
+  }
+  .offer-main {
+    width: 100%;
+    padding: 0 20px;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+  .offer-content {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    margin: 0 0 32px 0;
+  }
+  .offer-content img {
+    width: 140px;
+    height: 24px;
+  }
+  .offer-content h1 {
+    font: normal normal 900 24px/32px Roboto;
+    letter-spacing: 1px;
+    color: var(---023e84-primary);
+    margin: 16px 0;
+  }
+  .offer-content button {
+    font: normal normal 500 14px/19px Roboto;
+    letter-spacing: 0.7px;
+    color: var(---ffffff-bg-1);
+    background: var(---ed751b-keycolor);
+    width: 200px;
+    height: 44px;
+    border-radius: 24px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  .offer-image {
+    background: url(../src/Gruppe_22059-2x.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 236px;
+    height: 152px;
+    margin: 24px 0 28px 0;
+  }
+  main {
+    width: 100%;
+    padding: 0;
+  }
+  .cards {
+    margin: 32px 20px 40px 20px;
+  }
+  .cards h2 {
+    font: normal normal 400 24px/32px Roboto;
+    letter-spacing: 0.31px;
+    color: var(---023e84-primary);
+    margin: 0 0 20px 0;
+    text-align: center;
+  }
+  .cards-container {
+    flex-direction: column;
+  }
+  .cards-container div {
+    display: flex;
+    flex-direction: row;
+    text-align: unset;
+    padding: 16px;
+    align-items: flex-start;
+  }
+  .cards-container div:nth-child(2) {
+    margin: 20px 0;
+  }
+  .cards-container div img {
+    width: 53px;
+    margin: 0 17px 0 0;
+  }
+  .cards-container div span {
+    font: normal normal 700 16px/21px Roboto;
+    letter-spacing: 0.32px;
+    color: var(---023e84-primary);
+    margin: 0 0 4px 0;
+  }
+  .offers-container {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 40px 20px;
+    border-top: 8px solid var(---f5f7fa-bg-2);
+    text-align: center;
+  }
+  .offers-container img {
+    width: 192px;
+    height: 100%;
+    margin: 0 0 24px 0;
+  }
+  .offers-container div {
+    padding: 0;
+  }
+  .offers-container div h2 {
+    font: normal normal 700 24px/32px Roboto;
+    letter-spacing: 1px;
+    color: var(---023e84-primary);
+    margin: 12px 0;
+  }
+  .offers-container div p {
+    font: normal normal 400 16px/23px Roboto;
+    letter-spacing: 0.26px;
+    color: var(---023e84-primary);
+    margin: 0 0 28px 0;
+  }
+  .offers-container div button {
+    font: normal normal 500 14px/19px Roboto;
+    letter-spacing: 0.7px;
+    color: var(---ffffff-bg-1);
+    background: var(---ed751b-keycolor);
+    width: 200px;
+    height: 44px;
+    border-radius: 24px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  .offers-container:nth-child(odd) {
+    flex-direction: column;
+  }
+  .offers-container:nth-child(odd) div {
+    padding: 0;
+  }
+  footer {
+    height: 219px;
+  }
+  .footer {
+    display: grid;
+    width: 100%;
+    padding: 35px 24px;
+  }
+  .footer a.logo {
+    display: inline-flex;
+    height: 26px;
+  }
+  .footer div {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-auto-flow: column;
+    grid-template-rows: auto auto auto;
+    grid-column-gap: 50px;
+    margin: 15px 0 0 0;
+  }
+  .footer div a {
+    font: normal normal 400 14px/20px Roboto;
+    letter-spacing: 0.35px;
+    color: var(---ffffff-bg-1);
+    margin: 15px 0 0 0;
+  }
+}/*# sourceMappingURL=main.css.map */
